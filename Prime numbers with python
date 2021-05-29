@@ -1,0 +1,14 @@
+"""
+I choose the python to write this code
+
+ """
+
+prime_numbers = [] # I created a space list so as to enter prime numbers
+for i in range(500, 600): # For 3 digit primenumbers starting with5, I set the range to 500-600. I determined the range until 600, since the last number is 599
+    for b in range(2, i): # The condition for being a prime number is that it is only divisible by 1 and itself, the refore I divided all numbers to itself by starting 2
+        if(i%b == 0): # if the remainder is zero, it is not a prime number
+            break
+    else: # I aligned the else with for because I want to enter else if it is tried in the whole for loop and can't find it
+        prime_numbers.append(i) # I added the numbers in else to prime numbers
+print(prime_numbers) # and I printed to screen
+        
