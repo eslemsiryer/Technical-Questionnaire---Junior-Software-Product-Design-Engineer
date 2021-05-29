@@ -1,0 +1,21 @@
+:heavy_plus_sign:   **`New User`**  :ballot_box_with_check: **Hide Disabled User**                                                                                     **`Save User`**
+********************************************************************************************************************************
+
+
+<form>  
+<label for="fname" style="bold">Username:</label><br>  
+<input type="text"  id="fname"  name="fname"><br>  
+<label for="lname" >Display name:</label><br>  
+<input type="text"  id="lname"  name="lname"> <br>  
+<label for="fname" style="bold">Phone:</label><br>  
+<input type="text"  id="fname"  name="fname"><br>  
+<label for="lname" >Email:</label><br>  
+<input type="text"  id="lname"  name="lname"><br>    
+<label for="lname" > User Roles:</label><br>  
+<input type="text"  id="lname"  name="lname">  <br>
+<input type="checkbox"  id="vehicle2"  name="vehicle2"  value="Car">  
+<label for="vehicle2"> Enabled:</label><br>  
+
+
+</form>
+
