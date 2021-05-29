@@ -1,0 +1,34 @@
+create table Employee( /* Firstly, I created the Employee Table. */
+EmployeeID int not null, 
+FirstName nvarchar(50) not null,
+LastName nvarchar(50) not null,
+City nvarchar(50) not null,
+State nvarchar(50) not null) /* I created each column in its own datatype and I placed relevant data by using the edit top */
+
+create table Payments( /* After that, to create the Payments Table */
+EmployeeID int not null,
+Salary_date nvarchar(50) not null,
+Month_ID int not null,
+Value_$ int not null,)
+
+
+-- I provided the table controls
+select * 
+from dbo.Employee
+
+select * 
+from dbo.Payments
+
+
+-- 1. Write the SQL queries to display the total amount earned by each employee's name and surname.
+
+
+select SUM(Value_$) as Total_amount, FirstName, LastName /* I queried the 3 requested columns that are name, surname, and total amount by using the select query. I used th SUM in order to calculate the total amount */ 
+from dbo.Employee as dem inner join dbo.Payments as dp /* I have inner joined the Employee and Payments tables and given them alias names to make it easy to use */
+on dem.EmployeeID = dp.EmployeeID /* I completed commmon column by using EmployeeID */
+group by FirstName, LastName /* Than, I used the group by to group the rest of columns */
+
+-- 2. Display all employees that have their names starting with the J letter.
+select *
+from dbo.Employee
+WHERE FirstName like 'J%' /* I queried the names starting with J in the FirstName column by using WHERE and like */
